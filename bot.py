@@ -4,9 +4,9 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 import tensorflow as tf
 
-def load_image(path, size = [150,150]):
+def load_image(path, size = [250,250]):
   img = load_img(path, target_size = size)
-  return img_to_array(img).reshape(1,150,150,3)
+  return img_to_array(img).reshape(1,size[0],size[1],3)
 
 catdog_classifier = load_model('CatDog.h5', compile= False)
 graph = tf.get_default_graph()
