@@ -11,7 +11,7 @@ def load_image(path, size = [250,250]):
 catdog_classifier = load_model('CatDog.h5', compile= False)
 graph = tf.get_default_graph()
 
-_token = '831937104:AAEdZQq6_CrpnkIVmteJPHYzBl6nkRl2AwM'
+_token = 'TOKEN'
 
 bot = telebot.TeleBot(_token)
 @bot.message_handler(commands=['start'])
