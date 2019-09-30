@@ -16,7 +16,7 @@ _token = 'TOKEN'
 bot = telebot.TeleBot(_token)
 @bot.message_handler(commands=['start'])
 def start_message(message):
-  bot.send_message(message.chat.id, 'Чё каво чепушило')
+  bot.send_message(message.chat.id, "Hi! Let's find out who is on photo.")
 
 @bot.message_handler(content_types=['photo'])
 def send_message(message):
