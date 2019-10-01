@@ -12,15 +12,19 @@ def load_image(path, size=[250, 250]):
 catdog_classifier = load_model('CatDog.h5', compile= False)
 graph = tf.get_default_graph()
 
-_token = '831937104:AAEdZQq6_CrpnkIVmteJPHYzBl6nkRl2AwM'
+_token = 'TOKEN'
 
 bot = telebot.TeleBot(_token)
 
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
+<<<<<<< HEAD
     bot.send_message(message.chat.id, 'Чё каво чепушило')
 
+=======
+  bot.send_message(message.chat.id, "Hi! Let's find out who is on photo.")
+>>>>>>> dc20b47630fc8d92eadca8c7da30315fffb7bbbc
 
 @bot.message_handler(content_types=['photo'])
 def send_message(message):
